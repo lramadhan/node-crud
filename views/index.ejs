@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Node JS Learn Result</title>
+</head>
+<body>
+  <header>It is just a simple CRUD with Node.js</header>
+
+  <main>
+    <div class="container">
+      <div class="container-header">
+        <h1>Data List</h1>
+      </div>
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Datum</th>
+          <th><button class="btn" onclick="window.location.href='/tambah'">+ Tambah Data</button></th>
+        </tr>
+        <% var x = 0; datum.forEach((data) => { %>
+        <tr>
+          <td><%= x = x + 1 %> </td>
+          <td><%= data.nama %></td>
+          <td>
+            <a href="/ubah/<%= data.id %> ">Ubah</a>
+            <form action="/hapus/<%= data.id %>" method="POST">
+              <input type="submit" value="Hapus" class="in-hapus"></input>
+            </form>
+          </td>
+        </tr>
+        <% }) %> 
+      </table>
+    </div>
+  </main>
+</body>
+</html>

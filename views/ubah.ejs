@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Node JS Learn Result</title>
+</head>
+<body>
+  <header>It is just a simple CRUD with Node.js</header>
+
+  <main>
+    <div class="container">
+      <div class="container-header">
+        <h1>Edit selected data</h1>
+      </div>
+      <form class="form-control" action="/update/<%= data.id %> " method="POST">
+        <input type="text" name="dataNama" class="form-control" value="<%= data.nama %>">
+        <div class="btn-group">
+          <button class="btn-cancel" type="reset" onclick="window.location.href='/'">Kembali</button>
+          <button class="btn-submit" type="submit">Tambahkan</>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
